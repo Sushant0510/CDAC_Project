@@ -1,6 +1,7 @@
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+//import { BrowserRouter as Router, Route, Routes, } from "react-router-dom";
 import LoginScreen from "./Screens/LoginScreen";
 import RegistrationScreen from "./Screens/RegistrationScreen";
 import HomeScreen from "./Screens/HomeScreen";
@@ -18,6 +19,7 @@ import PropertyDetailsScreen from "./Screens/PropertyDetailsScreen";
 import GetContact from "./Screens/GetContact";
 import ForgotPassScreen from "./Screens/ForgotPassScreen";
 import AddFacilities from "./Screens/AddFacilities";
+import DeleteProperty from "./Screens/DeleteProperty";
 
 function App() {
   return (
@@ -25,24 +27,25 @@ function App() {
       <Router>
         <Navigation />
 
-        <Switch>
-          <Route path="/viewusers" component={ViewUsersScreen} />
-          <Route path="/viewproperty" component={ViewPropertyScreen} />
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/registration" component={RegistrationScreen} />
-          <Route path="/addproperty" component={AddPropertyScreen} />
-          <Route path="/payment" component={PaymentScreen} />
-          <Route path="/adminprofile" component={AdminProfileScreen} />
-          <Route path="/ownerprofile" component={OwnerProfileScreen} />
-          <Route path="/seekerprofile" component={SeekerProfileScreen} />
-          <Route path="/editprofile" component={EditProfileScreen} />
-          <Route path="/propertydetails" component={PropertyDetailsScreen} />
-          <Route path="/getcontact" component={GetContact} />
-          <Route path="/forgotpass" component={ForgotPassScreen} />
-          <Route path="/addfacilities" component={AddFacilities} />
+        <Routes>
+          <Route path="/viewusers" element={<ViewUsersScreen/>} />
+          <Route path="/viewproperty" element={<ViewPropertyScreen/>} />
+          <Route path="/login" element={<LoginScreen/>} />
+          <Route path="/registration" element={<RegistrationScreen/>} />
+          <Route path="/addproperty" element={<AddPropertyScreen/>} />
+          <Route path="/payment" element={<PaymentScreen/>} />
+          <Route path="/adminprofile" element={<AdminProfileScreen/>} />
+          <Route path="/ownerprofile" element={<OwnerProfileScreen/>} />
+          <Route path="/seekerprofile" element={<SeekerProfileScreen/>} />
+          <Route path="/editprofile" element={<EditProfileScreen/>} />
+          <Route path="/propertydetails" element={<PropertyDetailsScreen/>} />
+          <Route path="/getcontact" element={<GetContact/>} />
+          <Route path="/forgotpass" element={<ForgotPassScreen/>} />
+          <Route path="/addfacilities" element={<AddFacilities/>} />
+         <Route path="/delete/:propid" element={<DeleteProperty/>} /> 
 
-          <Route path="/" component={HomeScreen} />
-        </Switch>
+          <Route path="/" element={<HomeScreen/>} />
+        </Routes>
         <Footer>
           <Footer />
         </Footer>

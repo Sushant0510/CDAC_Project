@@ -9,7 +9,6 @@ const Profile = (props) => {
         <CardBody class=" container text-center mt-4 mb-3">
           <CardTitle tag="h5">Name : {props.name}</CardTitle>
           <CardText>Email : {props.email}</CardText>
-
           <CardText>Phone : {props.phone}</CardText>
           <CardText>Address : {props.address}</CardText>
         </CardBody>

@@ -34,13 +34,13 @@ const HomeScreen = (props) => {
           );
         })}
 
-      <Link
+       <Link
         type="button"
         class="col-sm-12 btn btn-secondary float-center m-3"
         to="/propertydetails"
       >
         View All Properties
-      </Link>
+      </Link> 
     </div>
   );
 };

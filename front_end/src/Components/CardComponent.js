@@ -41,6 +41,7 @@ const CardComponent = (props) => {
           >
             Get Owner Contact
           </Link>
+         
         </CardBody>
       </Card>
     </div>

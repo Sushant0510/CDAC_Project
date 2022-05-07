@@ -15,6 +15,7 @@ private String furnished;
 private String securityGuard;
 	@Column(length=25)
 private String lift;
+	
 	@Column(length=25)
 private String cctv;
          @ManyToOne(fetch = FetchType.LAZY)

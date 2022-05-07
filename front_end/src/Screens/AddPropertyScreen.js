@@ -83,7 +83,7 @@ const AddPropertyScreen = () => {
       <Header title="Add Property With Valid Details.." />
 
       <div class="container col-sm-4 mt-5 border border-dark border-5 bg-light-gradient ">
-        <form class="row g-3 needs-validation font-weight-bold  " novalidate>
+        <form class="row g-3 needs-validation font-weight-bold  " novalidate style={{color: 'white'}}>
           <div class="col-md-6 mt-3">
             <label for="validationCustom05" class="form-label">
               Pincode
@@ -207,7 +207,7 @@ const AddPropertyScreen = () => {
               class="btn btn-danger float-right"
               to="/ownerprofile"
             >
-              Cancle
+              Cancel
             </Link>
           </div>
           <br></br>

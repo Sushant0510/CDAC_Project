@@ -37,6 +37,13 @@ const OwnerProfileScreen = (props) => {
         <Link type="button" class="btn btn-danger m-3" to="/addproperty">
           Add Property
         </Link>
+        {/* <Link type="button" class="btn btn-danger m-3" to="/addfacilities">
+          Add Facilities
+        </Link> */}
+        <Link type="button" class="btn btn-danger m-3" to="/viewproperty">
+          View All Properties
+        </Link>
+        
       </div>
     </div>
   );

@@ -25,9 +25,10 @@ public interface PropertyRepository extends JpaRepository<PropertyDetails, Integ
 	@Query("select a.city from PropertyDetails a where a.city=:city")
 	String existsCityByName(@Param(value="city")String city);
    
-	@Query("select a from PropertyDetails a where a.city=:city")
+	@Query("select a from PropertyDetails a where a.city =:city")
     List <PropertyDetailsDTO> findFlatByCity(@Param(value = "city") String city);
 	
 	@Query ("select p from PropertyDetails p join fetch p.ownerData where p.id=:propid")
 	  OwnerDetailsDTO getOwnerDetails(@Param ("propid") int id);
 }
+														

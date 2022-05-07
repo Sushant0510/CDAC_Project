@@ -11,16 +11,26 @@ const AddFacilities = (props) => {
   const [securityGuard, , setSecurity] = useState("");
   const [lift, setlift] = useState("");
 
-  const propertyAdd = useSelector((store) => store.propertyAdd);
+  const addFacility = useSelector((store) => store.addFacility);
 
-  const { loading, response, error } = propertyAdd;
-  const propId = propertyAdd.response.result;
+  const { loading, response, error } = addFacility;
+  const propId = addFacility.response.result;
 
   const dispatch = useDispatch();
 
   const OnAdd = () => {
     dispatch(addFacilities(propId, furnished, securityGuard, lift));
   };
+
+  useEffect(() => {
+    if (response && response.status == "success") {
+    } else if (error) {
+      // there is an error while making the API call
+      console.log(error);
+      alert("error while making API call");
+    }
+  }, [loading, response, error]);
+
 
   return (
     <div className="text-center mt-5">

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getProperty } from "../Actions/UserActions";
+import {Link} from 'react-router-dom';
 
 const VIewPropertyScreen = (props) => {
   const dispatch = useDispatch();
@@ -45,6 +46,13 @@ const VIewPropertyScreen = (props) => {
                   <td>{fetchProperty.propertyType}</td>
                   <td>{fetchProperty.rent}</td>
                   <td>{fetchProperty.status}</td>
+                  <td>
+                            <Link 
+                            class="nav-link" 
+                            to={'/delete/'+fetchProperty.id}
+                            >Delete</Link>
+                            
+                        </td>
                 </tr>
               );
             })}

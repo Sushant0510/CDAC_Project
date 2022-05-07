@@ -11,6 +11,7 @@ const PropertyDetailsScreen = (props) => {
   const fetchProperty = useSelector((store) => store.fetchProperty);
   const { error, response, loading } = fetchProperty;
 
+
   useEffect(() => {
     dispatch(getProperty());
   }, []);
@@ -34,12 +35,12 @@ const PropertyDetailsScreen = (props) => {
           );
         })}
 
-      <Link
+       <Link
         type="button"
         class="col-sm-12 btn btn-primary float-center m-3"
-        to="/viewproperty"
+        to="/"
       >
-        View All Properties
+        Back to home page
       </Link>
     </div>
   );
